@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+import styles from './App.module.scss';
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home/Home';
+import Cart from './pages/Cart/Cart';
+import PizzaPage from './pages/PizzaPage/PizzaPage';
+import NotFound from './pages/NotFound/NotFound';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <div className={styles.App}>
+            <Header totalPrice={1680} itemsInCart={3} />
+            <div className={styles.MainContent}>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/cart' element={<Cart />} />
+                    <Route path='/pizza/:id' element={<PizzaPage />} />
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
+            </div>
+        </div>
+    );
+};
 
 export default App;

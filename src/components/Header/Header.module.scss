@@ -1,0 +1,86 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 49px 38px 40px 77px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.LogoBlock {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+        height: 38px;
+        margin-right: 17px;
+    }
+}
+
+.TitleBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.MainText {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.SecondaryText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7b7b7b;
+}
+
+.CartButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 150px;
+    height: 50px;
+    background: #fe5f1e;
+    border-radius: 30px;
+    transition: ease-in-out 0.2s;
+    &:hover {
+        background: #282828;
+    }
+    cursor: pointer;
+}
+
+.Price {
+    color: #ffffff;
+    margin-left: 23px;
+    font-weight: 700;
+    min-width: 55px;
+}
+
+.Vl {
+    border-left: solid 1px #ffffff3f;
+    height: 25px;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.CountItems {
+    color: #ffffff;
+    margin-right: 23px;
+    margin-left: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .Header {
+        &__logoBlock {
+            img {
+                display: none;
+            }
+        }
+        &__secondaryText {
+            display: none;
+        }
+    }
+}

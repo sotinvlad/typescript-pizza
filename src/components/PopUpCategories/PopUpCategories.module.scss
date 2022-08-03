@@ -1,0 +1,35 @@
+.Main {
+    position: absolute;
+    width: 162px;
+    top: 50px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Type {
+    padding: 14px;
+    &:nth-child(1) {
+        margin-top: 13px;
+    }
+    &:last-child {
+        margin-bottom: 13px;
+    }
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #000000;
+    &_selected {
+        background: rgba(254, 95, 30, 0.05);
+        font-weight: 700;
+        color: #fe5f1e;
+    }
+    &:hover {
+        background: rgba(254, 95, 30, 0.05);
+    }
+}

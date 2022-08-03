@@ -1,0 +1,132 @@
+.PizzaBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 65px;
+    width: 280px;
+    img {
+        width: 260px;
+        cursor: pointer;
+    }
+}
+.Title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-top: 11px;
+    margin-bottom: 22px;
+}
+.Preferences {
+    width: 280px;
+    height: 85px;
+    left: 112px;
+    top: 690px;
+    background: #f3f3f3;
+    border-radius: 10px;
+}
+.Types {
+    display: flex;
+}
+.Type {
+    cursor: pointer;
+    width: 100%;
+    margin: 6px;
+    padding: 6px 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #2c2c2c;
+    &:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    &_selected {
+        background: #ffffff !important;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+        border-radius: 5px;
+    }
+}
+.Sizes {
+    display: flex;
+}
+.Size {
+    cursor: pointer;
+    width: 100%;
+    margin: 6px;
+    padding: 6px 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #2c2c2c;
+    &:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    &_selected {
+        background: #ffffff !important;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+        border-radius: 5px;
+    }
+}
+
+.Footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.Price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    margin-top: 24px;
+}
+.AddButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 155px;
+    height: 40px;
+    margin-top: 17px;
+    background: #ffffff;
+    border: 1px solid #eb5a1e;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #eb5a1e;
+    transition: ease-in-out 0.2s;
+    &:hover {
+        background: #fe5f1e;
+        border: 1px solid #fe5f1e;
+        color: #ffffff;
+    }
+}
+.Plus {
+    font-size: 30px;
+}
+.AddButtonText {
+    margin-left: -10px;
+}
+.Counter {
+    width: 22px;
+    height: 22px;
+    background: #eb5a1e;
+    color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
