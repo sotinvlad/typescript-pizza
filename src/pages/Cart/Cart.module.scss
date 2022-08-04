@@ -128,3 +128,26 @@
         background: #282828;
     }
 }
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+    }
+    .Logo {
+        margin-bottom: 15px;
+    }
+    .TotalBlock {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .TotalAmount {
+        margin-bottom: 15px;
+    }
+    .Buttons {
+        flex-direction: column;
+    }
+    .ReturnButton {
+        margin-bottom: 15px;
+    }
+}

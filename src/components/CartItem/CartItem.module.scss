@@ -2,9 +2,10 @@
     padding-top: 30px;
     padding-bottom: 30px;
     border-top: 1px solid #f4f4f4;
-    display: flex;
+    display: grid;
+    grid-template-columns: 400px 1fr 1fr 1fr;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -98,6 +99,7 @@
     line-height: 27px;
     letter-spacing: 0.01em;
     align-items: center;
+    margin-left: auto;
 }
 
 .Delete {
@@ -110,7 +112,37 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.25s ease;
+    margin-left: auto;
     &:hover {
         background: #d7d7d7;
+    }
+}
+
+@media (max-width: 1200px) {
+    .CartItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .PizzaAbout {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .Description {
+        align-items: center;
+        justify-content: center;
+    }
+    .Counter {
+        margin-bottom: 15px;
+    }
+    .Price {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .Delete {
+        margin: 0;
     }
 }
