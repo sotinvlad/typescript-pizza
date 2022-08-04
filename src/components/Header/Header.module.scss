@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
     img {
         height: 38px;
         margin-right: 17px;
@@ -26,7 +27,11 @@
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.01em;
+    color: #181818;
     text-transform: uppercase;
+    &:active {
+        color: #181818;
+    }
 }
 
 .SecondaryText {
@@ -46,6 +51,7 @@
     background: #fe5f1e;
     border-radius: 30px;
     transition: ease-in-out 0.2s;
+    text-decoration: none;
     &:hover {
         background: #282828;
     }

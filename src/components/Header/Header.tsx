@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import pizzaLogo from './../../assets/pizza-logo.png';
 import shopCart from './../../assets/shop-cart.svg';
 import styles from './Header.module.scss';
@@ -11,7 +11,7 @@ interface IHeader {
 const Header = ({ totalPrice, itemsInCart }: IHeader) => {
     return (
         <header className={styles.Header}>
-            <div className={styles.LogoBlock}>
+            <NavLink to='/' className={styles.LogoBlock}>
                 <img src={pizzaLogo} alt='Пицца' />
                 <div className={styles.TitleBlock}>
                     <span className={styles.MainText}>pizza for all</span>
@@ -19,13 +19,13 @@ const Header = ({ totalPrice, itemsInCart }: IHeader) => {
                         самая вкусная пицца во вселенной
                     </span>
                 </div>
-            </div>
-            <div className={styles.CartButton}>
+            </NavLink>
+            <NavLink to='/cart' className={styles.CartButton}>
                 <span className={styles.Price}>{totalPrice || 0} ₽</span>
                 <div className={styles.Vl}></div>
                 <img src={shopCart} alt='Корзина' />
                 <span className={styles.CountItems}>{itemsInCart || 0}</span>
-            </div>
+            </NavLink>
         </header>
     );
 };

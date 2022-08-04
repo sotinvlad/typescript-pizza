@@ -54,7 +54,7 @@ const Categories: React.FC = () => {
                 })}
             </div>
             <div className={styles.SortingBlock} ref={sortingBlockRef}>
-                <img src={sortingArrow} />
+                <img src={sortingArrow} alt='Сортировка' />
                 <span className={styles.Main}>Сортировка по:</span>
                 <span
                     className={styles.Secondary}
