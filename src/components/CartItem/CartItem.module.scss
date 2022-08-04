@@ -1,0 +1,148 @@
+.CartItem {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #f4f4f4;
+    display: grid;
+    grid-template-columns: 400px 1fr 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.PizzaAbout {
+    display: flex;
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.Description {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+}
+
+.Parameters {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: #8d8d8d;
+}
+
+.Counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fe5f1e;
+    border-radius: 50%;
+    color: #fe5f1e;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color: #fff;
+        background: #fe5f1e;
+    }
+}
+
+.Count {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.Plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fe5f1e;
+    border-radius: 50%;
+    color: #fe5f1e;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color: #fff;
+        background: #fe5f1e;
+    }
+}
+
+.Price {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    align-items: center;
+    margin-left: auto;
+}
+
+.Delete {
+    border: 2px solid #d7d7d7;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-left: auto;
+    &:hover {
+        background: #d7d7d7;
+    }
+}
+
+@media (max-width: 1200px) {
+    .CartItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .PizzaAbout {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .Description {
+        align-items: center;
+        justify-content: center;
+    }
+    .Counter {
+        margin-bottom: 15px;
+    }
+    .Price {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .Delete {
+        margin: 0;
+    }
+}

@@ -1,0 +1,153 @@
+.Cart {
+    padding: 10% 20%;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        margin-left: 18px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.01em;
+        color: #000000;
+    }
+}
+
+.ClearCartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+    }
+    span {
+        margin-left: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #b6b6b6;
+    }
+}
+
+.MainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.TotalBlock {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.TotalAmount {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    span {
+        font-weight: 900;
+    }
+}
+
+.TotalPrice {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    span {
+        color: #fe5f1e;
+        font-weight: 900;
+    }
+}
+
+.Buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.ReturnButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    user-select: none;
+    color: #cacaca;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    img {
+    }
+    span {
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &:hover {
+        background: #d3d3d3;
+        color: #fff;
+    }
+}
+
+.PayNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    height: 55px;
+    color: #fff;
+    background: #fe5f1e;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        background: #282828;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+    }
+    .Logo {
+        margin-bottom: 15px;
+    }
+    .TotalBlock {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .TotalAmount {
+        margin-bottom: 15px;
+    }
+    .Buttons {
+        flex-direction: column;
+    }
+    .ReturnButton {
+        margin-bottom: 15px;
+    }
+}
