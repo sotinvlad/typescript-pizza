@@ -80,13 +80,14 @@
 
 @media screen and (max-width: 768px) {
     .Header {
-        &__logoBlock {
-            img {
-                display: none;
-            }
-        }
-        &__secondaryText {
-            display: none;
-        }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .LogoBlock {
+        margin-bottom: 15px;
+    }
+    .CartButton {
+        max-width: 150px;
     }
 }
