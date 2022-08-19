@@ -1,29 +1,27 @@
 import classNames from 'classnames';
-import styles from './PopUpCategories.module.scss';
-
-interface PopUpCategory {
-    selectedSorting: string;
-    setSelectedSorting: (type: string) => void;
-    setShowPopUp: (action: boolean) => void;
-    types: string[];
-}
-
-const PopUpCategories: React.FC<PopUpCategory> = ({
-    selectedSorting,
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import {
     setSelectedSorting,
     setShowPopUp,
-    types,
-}) => {
+} from '../../redux/slices/filterSlice';
+import styles from './PopUpCategories.module.scss';
+
+const PopUpCategories: React.FC = () => {
+    const { selectedSorting, sortingTypes } = useAppSelector(
+        (state) => state.filter,
+    );
+    const dispatch = useAppDispatch();
     return (
         <div className={styles.Main}>
-            {types.map((type) => (
+            {sortingTypes.map((type, index) => (
                 <div
                     className={classNames(styles.Type, {
-                        [styles.Type_selected]: selectedSorting === type,
+                        [styles.Type_selected]:
+                            sortingTypes[selectedSorting] === type,
                     })}
                     onClick={() => {
-                        setSelectedSorting(type);
-                        setShowPopUp(false);
+                        dispatch(setSelectedSorting(index));
+                        dispatch(setShowPopUp(false));
                     }}>
                     {`по ${type}`}
                 </div>

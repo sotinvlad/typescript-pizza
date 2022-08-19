@@ -30,7 +30,6 @@ const PizzaBlock: React.FC<IPizzaBlock> = ({
     const [selectedType, setSelectedType] = useState<number>(0);
     const [selectedSize, setSelectedSize] = useState<number>(0);
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
-    console.log(isLoaded);
     return (
         <>
             <div
@@ -81,7 +80,11 @@ const PizzaBlock: React.FC<IPizzaBlock> = ({
                     </div>
                 </div>
             </div>
-            {!isLoaded && <SkeletonPizza />}
+            {!isLoaded && (
+                <div className={styles.Skeleton}>
+                    <SkeletonPizza />
+                </div>
+            )}
         </>
     );
 };

@@ -94,6 +94,7 @@
     color: #cacaca;
     transition: all 0.25s ease;
     cursor: pointer;
+    text-decoration: none;
     img {
     }
     span {
@@ -149,5 +150,57 @@
     }
     .ReturnButton {
         margin-bottom: 15px;
+    }
+}
+
+.EmptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 20%;
+    img {
+        margin-top: 45px;
+        height: 236px;
+        width: 265px;
+    }
+}
+
+.EmptyBold {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+}
+
+.EmptyRegular {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 145.4%;
+    letter-spacing: 0.01em;
+    color: #777777;
+}
+
+.ReturnButton2 {
+    margin-top: 70px;
+    height: 46px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    background: #282828;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    &:hover {
+        background: #fe5f1e;
     }
 }

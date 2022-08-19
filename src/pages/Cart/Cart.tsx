@@ -2,10 +2,22 @@ import styles from './Cart.module.scss';
 import shoppingCartImg from './../../assets/shopping-cart.png';
 import trashBucketSvg from './../../assets/trash-bucket.svg';
 import returnArrowSvg from './../../assets/return-arrow.svg';
+import emptyCartPng from './../../assets/empty-cart.png';
 import CartItem from '../../components/CartItem/CartItem';
+import { NavLink } from 'react-router-dom';
 
 interface ICart {
-    items?: [];
+    items?: [
+        {
+            id: number;
+            imageUrl: string;
+            title: string;
+            type: number;
+            size: number;
+            price: number;
+            count: number;
+        },
+    ];
 }
 
 const itemsExample = [
@@ -42,11 +54,14 @@ const itemsExample = [
 ];
 
 const Cart: React.FC<ICart> = ({ items = itemsExample }) => {
-    const totalPrice = items.reduce(
-        (totalPrice, item) => totalPrice + item.price * item.count,
-        0,
-    );
-    return (
+    const totalPrice =
+        items && items.length > 0
+            ? items.reduce(
+                  (totalPrice, item) => totalPrice + item.price * item.count,
+                  0,
+              )
+            : 0;
+    return items && items.length ? (
         <div className={styles.Cart}>
             <div className={styles.Header}>
                 <div className={styles.Logo}>
@@ -72,12 +87,26 @@ const Cart: React.FC<ICart> = ({ items = itemsExample }) => {
                 </div>
             </div>
             <div className={styles.Buttons}>
-                <div className={styles.ReturnButton}>
+                <NavLink to='/' className={styles.ReturnButton}>
                     <img src={returnArrowSvg} alt='Возврат назад' />
                     <span>Вернуться назад</span>
-                </div>
+                </NavLink>
                 <div className={styles.PayNow}>Оплатить сейчас</div>
             </div>
+        </div>
+    ) : (
+        <div className={styles.EmptyCart}>
+            <span className={styles.EmptyBold}>Корзина пустая 😕</span>
+            <span className={styles.EmptyRegular}>
+                Вероятней всего, вы еще не заказывали пиццу.
+            </span>
+            <span className={styles.EmptyRegular}>
+                Для того, чтобы заказать пиццу, перейдите на главную страницу.
+            </span>
+            <img src={emptyCartPng} alt='Корзина пуста...' />
+            <NavLink to='/' className={styles.ReturnButton2}>
+                Вернуться назад
+            </NavLink>
         </div>
     );
 };
